@@ -1,0 +1,22 @@
+Templates
+Public
+Music
+catkin_ws
+PX4-Autopilot
+launch_clover_sim.sh
+snap
+numpad_microsoft.sh
+vmware
+cudnn_samples_v8
+Steam
+bin
+Documents
+Arduino
+Desktop
+IUAV_World
+Финал КД НТО ＂Летающая робототехника＂. Трансляция с площадки проведения ГУАП. День 1. 2023-04-01 10_59 [6Vf_10OyCHY].mp4
+Финал КД НТО ＂Летающая робототехника＂. Трансляция с площадки проведения ГУАП. День 3. 2023-04-01 16_32 [DjoX4CuV2CQ].mp4
+Videos
+Pictures
+Projects
+Downloads
