@@ -1,0 +1,5 @@
+/usr/bin/gcc-ar-7
+/usr/bin/gcc-9
+/usr/bin/gcc-8
+/usr/bin/gcc-7
+/usr/bin/gcc
