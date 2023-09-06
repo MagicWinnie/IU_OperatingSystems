@@ -1,0 +1,6 @@
+   41  cd ..
+   42  cd week01
+   43  cat ex1.sh
+   44  pwd
+   45  ls -a
+   46  history | tail -n 6 > ex2.txt
