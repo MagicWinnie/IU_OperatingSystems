@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# so we can see history in noninteractive shells 
+# so history works in a script
 HISTFILE=~/.bash_history
 set -o history
 
