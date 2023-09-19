@@ -3,7 +3,7 @@
 #include <ctype.h>
 #define MAX_SIZE 256
 
-int count(char *str, char ch)
+int count(char str[], char ch)
 {
     int occurances = 0;
     for (size_t i = 0; i < strlen(str); i++)
@@ -13,7 +13,7 @@ int count(char *str, char ch)
     return occurances;
 }
 
-void countAll(char *str)
+void countAll(char str[])
 {
     size_t size = strlen(str);
     for (size_t i = 0; i < size; i++)
