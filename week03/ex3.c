@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_FILENAME 63ULL
-#define MAX_DIRNAME 63ULL
-#define MAX_PATH 2048ULL
-#define MAX_DATA 1024ULL
+#define MAX_FILENAME 63ULL + 1ULL
+#define MAX_DIRNAME 63ULL + 1ULL
+#define MAX_PATH 2048ULL + 1ULL
+#define MAX_DATA 1024ULL + 1ULL
 
 struct Directory
 {
