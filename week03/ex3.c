@@ -7,9 +7,6 @@
 #define MAX_PATH 2048ULL
 #define MAX_DATA 1024ULL
 
-// typedef struct File File;
-// typedef struct Directory Directory;
-
 struct Directory
 {
     char name[MAX_DIRNAME];
