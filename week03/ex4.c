@@ -83,7 +83,7 @@ int main(void)
     int *int_max = aggregate(int_arr, sizeof(int_arr), sizeof(int_arr) / sizeof(int_arr[0]), &int_init, &max_int);
     printf("Max of int: %d\n", *int_max);
 
-    double dbl_arr[5] = {5.1, 4.2, 3.3, 2.4, 1.5};
+    double dbl_arr[5] = {5.1, -4.2, 3.3, -2.4, 1.5};
 
     double dbl_init = 0;
     double *dbl_add = aggregate(dbl_arr, sizeof(dbl_arr), sizeof(dbl_arr) / sizeof(dbl_arr[0]), &dbl_init, &addition_dbl);
@@ -93,7 +93,7 @@ int main(void)
     double *dbl_mul = aggregate(dbl_arr, sizeof(dbl_arr), sizeof(dbl_arr) / sizeof(dbl_arr[0]), &dbl_init, &multiplication_dbl);
     printf("Multiplication of double: %f\n", *dbl_mul);
 
-    dbl_init = DBL_MIN;
+    dbl_init = -DBL_MAX;
     double *dbl_max = aggregate(dbl_arr, sizeof(dbl_arr), sizeof(dbl_arr) / sizeof(dbl_arr[0]), &dbl_init, &max_dbl);
     printf("Max of double: %f\n", *dbl_max);
 
