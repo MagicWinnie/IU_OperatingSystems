@@ -17,15 +17,20 @@ int main(void)
 {
     const int x = 1;
     const int *q = &x;
-    int *const p = (int *const)malloc(sizeof(int));
+    int *const p = (int *const)malloc(3 * sizeof(int));
 
-    *(p + 0) = x;
-    *(p + 1) = x;
-    *(p + 2) = 2 * x;
+    p[0] = x;
+    p[1] = x;
+    p[2] = 2 * x;
 
-    printf("Cell #0: %p\n", p);
-    printf("Cell #1: %p\n", p + 1);
-    printf("Cell #2: %p\n", p + 2);
+    if ((long long)&p[1] - (long long)&p[0] == sizeof(int))
+        printf("Cells #0 and #1 are contiguous\n");
+    else
+        printf("Cells #0 and #1 are not contiguous\n");
+    if ((long long)&p[2] - (long long)&p[1] == sizeof(int))
+        printf("Cells #1 and #2 are contiguous\n");
+    else
+        printf("Cells #1 and #2 are not contiguous\n");
 
     printf("T(4): %d\n", const_tri(p, 36));
 
