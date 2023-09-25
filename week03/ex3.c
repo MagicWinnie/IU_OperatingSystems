@@ -2,16 +2,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_FILENAME 63ULL + 1ULL
-#define MAX_DIRNAME 63ULL + 1ULL
-#define MAX_PATH 2048ULL + 1ULL
-#define MAX_DATA 1024ULL + 1ULL
+#define MAX_FILENAME 63 + 1
+#define MAX_DIRNAME 63 + 1
+#define MAX_PATH 2048 + 1
+#define MAX_DATA 1024 + 1
+#define MAX_FILES 256
 
 struct Directory
 {
     char name[MAX_DIRNAME];
-    struct File **files;
-    struct Directory **directories;
+    struct File *files[MAX_FILES];
+    struct Directory *directories[MAX_FILES];
     unsigned char nf;
     unsigned char nd;
     char path[MAX_PATH];
@@ -21,7 +22,7 @@ struct File
 {
     unsigned long long id;
     char name[MAX_FILENAME];
-    unsigned long long size;
+    size_t size;
     char data[MAX_DATA];
     struct Directory *directory;
 };
@@ -35,7 +36,7 @@ void overwrite_to_file(struct File *file, const char *str)
     }
     if (strlen(str) > MAX_DATA)
     {
-        printf("Error writing to file: maximum size of data is %lld\n", MAX_DATA);
+        printf("Error writing to file: maximum size of data is %d\n", MAX_DATA);
         return;
     }
     strcpy(file->data, str);
@@ -51,7 +52,7 @@ void append_to_file(struct File *file, const char *str)
     }
     if (file->size + strlen(str) > MAX_DATA)
     {
-        printf("Error appending to file: maximum size of data is %lld\n", MAX_DATA);
+        printf("Error appending to file: maximum size of data is %d\n", MAX_DATA);
         return;
     }
     strcat(file->data, str);
@@ -60,7 +61,8 @@ void append_to_file(struct File *file, const char *str)
 
 void printp_file(struct File *file)
 {
-    printf("%s/%s\n", file->directory->path, file->name);
+    if (file->directory)
+        printf("%s/%s\n", file->directory->path, file->name);
 }
 
 void add_file(struct File *file, struct Directory *dir)
@@ -70,7 +72,7 @@ void add_file(struct File *file, struct Directory *dir)
         printf("Error adding file to directory: directory does not exist\n");
         return;
     }
-    if (dir->nf == 255)
+    if (dir->nf == MAX_FILES - 1)
     {
         printf("Error adding file to directory: maximum number of files is 256\n");
         return;
@@ -140,15 +142,13 @@ struct Directory *create_directory(char *name)
 {
     if (strlen(name) >= MAX_DIRNAME)
     {
-        printf("Error creating directory: maximum size of dirname is %lld\n", MAX_DIRNAME);
+        printf("Error creating directory: maximum size of dirname is %d\n", MAX_DIRNAME);
         return NULL;
     }
     struct Directory *dir = (struct Directory *)malloc(sizeof(struct Directory));
     strcpy(dir->name, name);
     dir->nf = 0;
-    dir->files = (struct File **)malloc(sizeof(struct File *));
     dir->nd = 0;
-    dir->directories = (struct Directory **)malloc(sizeof(struct Directory *));
     return dir;
 }
 
@@ -156,7 +156,7 @@ struct File *create_file(unsigned long long id, char *name)
 {
     if (strlen(name) >= MAX_FILENAME)
     {
-        printf("Error creating file: maximum size of filename is %lld\n", MAX_FILENAME);
+        printf("Error creating file: maximum size of filename is %d\n", MAX_FILENAME);
         return NULL;
     }
     struct File *file = (struct File *)malloc(sizeof(struct File));
@@ -185,7 +185,7 @@ int main(void)
     struct File *ex3_2 = create_file(2, "ex3_2.c");
     add_file(ex3_2, home);
 
-    overwrite_to_file(ex3_1, "int printf(const char * format, ...);");
+    overwrite_to_file(ex3_1, "int printf(const char * format, ...);\n");
 
     overwrite_to_file(ex3_2, "//This is a comment in C language");
 
@@ -199,9 +199,9 @@ int main(void)
 
     show_dir(root);
 
-    printf("Content of bash: %s\n", bash->data);
-    printf("Content of ex3_1.c: %s\n", ex3_1->data);
-    printf("Content of ex3_2.c: %s\n", ex3_2->data);
+    printf("* Content of bash:\n%s\n", bash->data);
+    printf("* Content of ex3_1.c:\n%s\n", ex3_1->data);
+    printf("* Content of ex3_2.c:\n%s\n", ex3_2->data);
 
     free(bash);
     free(ex3_1);
