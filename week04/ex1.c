@@ -2,6 +2,7 @@
 #include <time.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 
 int main(void)
 {
@@ -35,7 +36,9 @@ int main(void)
         else
         {
             // main process
-            usleep(100000); // no orphan processes, clock DOES NOT account for sleep
+            while (wait(NULL) > 0)
+            {
+            }
             printf("[ MAIN  ] PID{%d} PPID{%d} TIME(ms){%.4f}\n",
                    getpid(),
                    getppid(),
