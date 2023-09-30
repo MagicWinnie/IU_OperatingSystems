@@ -1,0 +1,100 @@
+Running for n = 3
+Running pstree for 0 time...
+  |   |   |       |-ex3.out,31266 3
+  |   |   |       |   `-ex3.out,31269 3
+  |   |   |       |-grep,31268 ex3.out
+Running pstree for 1 time...
+  |   |   |       |-ex3.out,31266 3
+  |   |   |       |   |-ex3.out,31269 3
+  |   |   |       |   |   `-ex3.out,31274 3
+  |   |   |       |   `-ex3.out,31273 3
+  |   |   |       |-grep,31276 ex3.out
+Running pstree for 2 time...
+  |   |   |       |-ex3.out,31266 3
+  |   |   |       |   |-ex3.out,31269 3
+  |   |   |       |   |   |-ex3.out,31274 3
+  |   |   |       |   |   |   `-ex3.out,31291 3
+  |   |   |       |   |   `-ex3.out,31289 3
+  |   |   |       |   |-ex3.out,31273 3
+  |   |   |       |   |   `-ex3.out,31292 3
+  |   |   |       |   `-ex3.out,31290 3
+  |   |   |       |-grep,31294 ex3.out
+Running pstree for 3 time...
+  |   |   |       |-grep,31303 ex3.out
+
+
+Running for n = 5
+Running pstree for 0 time...
+  |   |   |       |-ex3.out,31308 5
+  |   |   |       |   `-ex3.out,31311 5
+  |   |   |       |-grep,31310 ex3.out
+Running pstree for 1 time...
+  |   |   |       |-ex3.out,31308 5
+  |   |   |       |   |-ex3.out,31311 5
+  |   |   |       |   |   `-ex3.out,31322 5
+  |   |   |       |   `-ex3.out,31321 5
+  |   |   |       |-grep,31324 ex3.out
+Running pstree for 2 time...
+  |   |   |       |-ex3.out,31308 5
+  |   |   |       |   |-ex3.out,31311 5
+  |   |   |       |   |   |-ex3.out,31322 5
+  |   |   |       |   |   |   `-ex3.out,31333 5
+  |   |   |       |   |   `-ex3.out,31332 5
+  |   |   |       |   |-ex3.out,31321 5
+  |   |   |       |   |   `-ex3.out,31334 5
+  |   |   |       |   `-ex3.out,31331 5
+  |   |   |       |-grep,31336 ex3.out
+Running pstree for 3 time...
+  |   |   |       |-ex3.out,31308 5
+  |   |   |       |   |-ex3.out,31311 5
+  |   |   |       |   |   |-ex3.out,31322 5
+  |   |   |       |   |   |   |-ex3.out,31333 5
+  |   |   |       |   |   |   |   `-ex3.out,31351 5
+  |   |   |       |   |   |   `-ex3.out,31350 5
+  |   |   |       |   |   |-ex3.out,31332 5
+  |   |   |       |   |   |   `-ex3.out,31348 5
+  |   |   |       |   |   `-ex3.out,31349 5
+  |   |   |       |   |-ex3.out,31321 5
+  |   |   |       |   |   |-ex3.out,31334 5
+  |   |   |       |   |   |   `-ex3.out,31353 5
+  |   |   |       |   |   `-ex3.out,31352 5
+  |   |   |       |   |-ex3.out,31331 5
+  |   |   |       |   |   `-ex3.out,31347 5
+  |   |   |       |   `-ex3.out,31346 5
+  |   |   |       |-grep,31355 ex3.out
+Running pstree for 4 time...
+  |   |   |       |-ex3.out,31308 5
+  |   |   |       |   |-ex3.out,31311 5
+  |   |   |       |   |   |-ex3.out,31322 5
+  |   |   |       |   |   |   |-ex3.out,31333 5
+  |   |   |       |   |   |   |   |-ex3.out,31351 5
+  |   |   |       |   |   |   |   |   `-ex3.out,31376 5
+  |   |   |       |   |   |   |   `-ex3.out,31372 5
+  |   |   |       |   |   |   |-ex3.out,31350 5
+  |   |   |       |   |   |   |   `-ex3.out,31371 5
+  |   |   |       |   |   |   `-ex3.out,31368 5
+  |   |   |       |   |   |-ex3.out,31332 5
+  |   |   |       |   |   |   |-ex3.out,31348 5
+  |   |   |       |   |   |   |   `-ex3.out,31367 5
+  |   |   |       |   |   |   `-ex3.out,31362 5
+  |   |   |       |   |   |-ex3.out,31349 5
+  |   |   |       |   |   |   `-ex3.out,31369 5
+  |   |   |       |   |   `-ex3.out,31365 5
+  |   |   |       |   |-ex3.out,31321 5
+  |   |   |       |   |   |-ex3.out,31334 5
+  |   |   |       |   |   |   |-ex3.out,31353 5
+  |   |   |       |   |   |   |   `-ex3.out,31374 5
+  |   |   |       |   |   |   `-ex3.out,31370 5
+  |   |   |       |   |   |-ex3.out,31352 5
+  |   |   |       |   |   |   `-ex3.out,31375 5
+  |   |   |       |   |   `-ex3.out,31373 5
+  |   |   |       |   |-ex3.out,31331 5
+  |   |   |       |   |   |-ex3.out,31347 5
+  |   |   |       |   |   |   `-ex3.out,31366 5
+  |   |   |       |   |   `-ex3.out,31364 5
+  |   |   |       |   |-ex3.out,31346 5
+  |   |   |       |   |   `-ex3.out,31361 5
+  |   |   |       |   `-ex3.out,31363 5
+  |   |   |       |-grep,31378 ex3.out
+Running pstree for 5 time...
+  |   |   |       |-grep,31387 ex3.out

@@ -2,3 +2,4 @@
 examples/
 
 *.out
+!week04/ex3.sh.out

@@ -1,0 +1,51 @@
+In file ex3.sh.out you can find the output of ex3.sh that I ran.
+
+
+When the program was launched with n = 3, maximum amount of processes observed containing "ex3.out" was 9.
+One of them was grep, another one was the main process, and there were 7 children.
+
+Let us look at the first iteration:
+* main process creates a child C1
+* C1 starts executing from the next command from fork
+* main and C1 sleep for 5 seconds
+* main and C1 go to the next iteration
+
+The second iteration:
+* main process creates another child C2
+* C2 starts executing from the next command from fork
+* C1 creates its own new child C3
+* C3 starts executing from the next command from fork
+* main, C1, C2, and C3 sleep for 5 seconds
+* main, C1, C2, and C3 go to the next iteration
+
+It can be extrapolated for last iteration and represented as a graph:
+(I# - iteration #, M - main process, C# - child #)
+
+  I1     I2    I3
+M--+--M--+--M--+--M
+   |     |     |
+   |     |     `--C4
+   |     |     
+   |     `--C2-+--C2
+   |           |
+   |           `--C5
+   |           
+   `--C1-+--C1-+--C1
+         |     |
+         |     `--C6
+         |
+         `--C3-+--C3
+               |
+               `--C7
+
+And it is clear that at the end we have 2^3 = 8 leaf nodes (processes).
+
+
+When the program was launched with n = 5, maximum amount of processes observed containing "ex3.out" was 33.
+One of them was grep, another one was the main process, and there were 31 children.
+
+Using the same reasoning as in the case with n = 3, we can plot a similar graph with 2^5 = 32 lead nodes (processes).
+
+It is obvious that these graphs are binary trees (every node has two children).
+And the number of leaves is equal to the number of processes that we are going to have.
+It is calculated as 2^n and obviously number of children is 2^n-1.
