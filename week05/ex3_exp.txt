@@ -1,0 +1,11 @@
+Let us look at `real` part of `time` commands results. It represents the actual time in running the program.
+We can see that as value of m is increasing, the value of `real` time is decreasing.
+It happens as multiple threads parallelly run for lower values:
+* n = 1, one thread runs for 10000000 values.
+* n = 2, two threads parallelly run for 5000000 values each.
+* n = 4, four threads parallelly run for 2500000 values each.
+* n = 10, ten threads parallelly run for 1000000 values each.
+* n = 100, hundred threads parallelly run for 100000 values each.
+
+Let us look at `user+sys` part of `time` commands results. It represents the sum of CPU time taken by each thread.
+These values increase, as values of m increase. It is probably caused by time taken to create threads, join them, create and free arrays.

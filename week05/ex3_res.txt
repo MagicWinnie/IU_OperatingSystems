@@ -1,0 +1,25 @@
+======Running with arguments 10000000 1======
+Result: 664579
+real	0m8,377s
+user	0m8,260s
+sys	0m0,032s
+======Running with arguments 10000000 2======
+Result: 664579
+real	0m5,443s
+user	0m8,608s
+sys	0m0,040s
+======Running with arguments 10000000 4======
+Result: 664579
+real	0m4,803s
+user	0m11,813s
+sys	0m0,075s
+======Running with arguments 10000000 10======
+Result: 664579
+real	0m4,239s
+user	0m12,109s
+sys	0m0,071s
+======Running with arguments 10000000 100======
+Result: 664579
+real	0m3,651s
+user	0m12,277s
+sys	0m0,048s
