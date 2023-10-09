@@ -1,0 +1,10 @@
+I have run my script with n = 3, and all my subscribers have got the message.
+Because each of these subscribers was working with a separate named pipe.
+
+Named pipes work in a FIFO (First In First Out) manner, so they are queues.
+Then if a subscriber reads a message from the pipe, then it gets deleted.
+
+So, let us have two processes subscribe for one named pipe. If the first one
+reads the message, then the other one process cannot read the other message.
+
+Therefore, we have to have separate named pipes between each pair of processes.
