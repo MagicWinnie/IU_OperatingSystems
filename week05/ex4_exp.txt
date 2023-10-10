@@ -1,0 +1,4 @@
+There is one major difference between exercise 3 and exercise 4 time readings.
+It is the `sys` part of `time` commands results which increased up to 10 times compared to exercise 3.
+But this increase is not constant and itself increases as value of m grows.
+This happens as the threads are spending more CPU time working with mutexes in the kernel.
