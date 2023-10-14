@@ -10,6 +10,7 @@ int pid;
 void sigint_handler(int code)
 {
     kill(pid, SIGTERM);
+    unlink(PID_FILE_PATH);
     exit(0);
 }
 
@@ -53,7 +54,7 @@ int main(void)
         }
         else if (strcmp(command, "continue\n") == 0)
         {
-            kill(pid, SIGSTOP);
+            kill(pid, SIGCONT);
         }
         else
         {
