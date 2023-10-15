@@ -139,7 +139,7 @@ ProcessData find_next_process()
     for (int i = 0; i < data_size; i++)
     {
         // find location of the next process to run from the {data} array
-        // Considering the scheduling algorithm FCFS
+        // Considering the scheduling algorithm SJF
         if (data[i].burst <= 0)
             continue;
         int time_diff = data[i].at - total_time;
