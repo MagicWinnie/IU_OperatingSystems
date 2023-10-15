@@ -1,0 +1,5 @@
+1. When TRI_BASE is lowered down to 100, workers start to find much more triangular numbers,
+   as they are more densly located closer to 0.
+
+2. Processes are executed in the following order: 0, 1, 2, 3, 4, 5, 6. As per the exercise,
+   if we have the same arrival time, then we execute the process with the least index.
