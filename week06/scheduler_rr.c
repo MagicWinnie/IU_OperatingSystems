@@ -253,6 +253,7 @@ void schedule_handler(int signum)
             ProcessData next_process = find_next_process();
             if (next_process.quantum == quantum)
             {
+                // 3.C.1. then create a new process for {running_process} and print the message:
                 create_process(next_process.idx);
                 printf("Scheduler: Starting Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
                 // Here we have the first response to the process {running_process} and we can calculate the metric {rt}
@@ -260,8 +261,10 @@ void schedule_handler(int signum)
             }
             else
             {
+                // 3.B. set current process {next_process} as the running process.
                 running_process = next_process.idx;
                 data[running_process].quantum = quantum;
+                // 3.C.2. or resume the process {running_process} if it is stopped and print the message:
                 printf("Scheduler: Resuming Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
                 resume(ps[running_process]);
             }
@@ -279,6 +282,7 @@ void schedule_handler(int signum)
         // then create a new process for {running_process} and print the message:
         if (next_process.quantum == quantum)
         {
+            // 3.C.1. then create a new process for {running_process} and print the message:
             create_process(next_process.idx);
             printf("Scheduler: Starting Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
             // Here we have the first response to the process {running_process} and we can calculate the metric {rt}
@@ -286,8 +290,10 @@ void schedule_handler(int signum)
         }
         else
         {
+            // 3.B. set current process {next_process} as the running process.
             running_process = next_process.idx;
             data[running_process].quantum = quantum;
+            // 3.C.2. or resume the process {running_process} if it is stopped and print the message:
             printf("Scheduler: Resuming Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
             resume(ps[running_process]);
         }
