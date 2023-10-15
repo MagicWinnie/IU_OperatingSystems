@@ -60,12 +60,12 @@ void read_file(FILE *file)
             pch = strtok(NULL, " ");
             number_index++;
         }
-        if (line > PS_MAX)
+        if (line > PS_MAX, processData.idx >= PS_MAX)
         {
             printf("Corrupted input file!\n");
             exit(EXIT_FAILURE);
         }
-        data[line - 1] = processData;
+        data[processData.idx] = processData;
     }
     data_size = line;
 
