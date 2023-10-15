@@ -216,6 +216,9 @@ void check_burst()
 // This function is called every one second as handler for SIGALRM signal
 void schedule_handler(int signum)
 {
+    // increment the total time
+    total_time++;
+
     // 1. If there is a worker process running, then decrement its remaining burst
     // and print messages as follows:
     // "Scheduler: Runtime: {total_time} seconds"
@@ -261,9 +264,6 @@ void schedule_handler(int signum)
         // Here we have the first response to the process {running_process} and we can calculate the metric {rt}
         data[running_process].rt = total_time - data[running_process].at;
     }
-
-    // increment the total time
-    total_time++;
 }
 
 int main(int argc, char *argv[])
