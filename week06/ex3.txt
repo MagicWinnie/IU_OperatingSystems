@@ -1,4 +1,4 @@
-Compared to exercise 2, the processes will be processed in the following order: 4, 5, 0, 1, 6, 2, 3.
+Compared to exercise 2, the processes are executed in the following order: 4, 5, 0, 1, 6, 2, 3.
 Using this arrangement, SJF's average Waiting Time and average Turnaround Time are much lower than in FCFS.
 This is achieved by completing more short tasks at the beginning, therefore, having more tasks with short WT and TAT.
 And, fewer long tasks have larger WT and TAT. Thus, the average is lowered.
