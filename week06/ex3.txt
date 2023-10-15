@@ -1,0 +1,4 @@
+Compared to exercise 2, the processes will be processed in the following order: 4, 5, 0, 1, 6, 2, 3.
+This arrangement is more optimal than First Come First Served algorithm's arrangement.
+Therefore, average Waiting Time and average Turnaround Time is much lower than in FCFS.
+But, in some conditions long processes can be never processed.
