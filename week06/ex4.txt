@@ -1,0 +1,8 @@
+Running with quantum = 3.
+Compared to exercises 2 and 3, the processes are executed in the following order: 4, 3, 5, 0, 4, 1, 3, 6, 1, 3, 2, 6.
+Some processes are executed several times, as Round-Robin is a pre-emptive algorithm. Some processes are stopped and
+then resumed. Using this arrangement, RR's average Waiting Time and average Turnaround Time are slightly higher than
+FCFS's and much higher than SJF's. This happens as we switch processes each constant amount of time, so processes
+need to wait a little bit more.
+
+Outputs of exercises 2, 3, and 4 can be found in files fifo.log, sjf.log, and rr.log, respectively.
