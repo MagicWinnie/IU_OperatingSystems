@@ -60,7 +60,7 @@ void read_file(FILE *file)
             pch = strtok(NULL, " ");
             number_index++;
         }
-        if (line > PS_MAX, processData.idx >= PS_MAX)
+        if (line > PS_MAX || processData.idx >= PS_MAX)
         {
             printf("Corrupted input file!\n");
             exit(EXIT_FAILURE);
