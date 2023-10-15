@@ -1,0 +1,279 @@
+Scheduler: Runtime: 1 seconds.
+Process 4: has not arrived yet.
+Scheduler: Starting Process 4 (Remaining Time: 4)
+Process 4 (PID=<226565>): has been started
+Process 4 (PID=<226565>): will find the next trianguar number from (481143, inf)
+Process 4 (PID=<226565>): I found this triangular number 481671
+Scheduler: Runtime: 3 seconds
+Scheduler: Process 4 is running with 3 seconds left
+Process 4 (PID=<226565>): I found this triangular number 482653
+Scheduler: Runtime: 4 seconds
+Scheduler: Process 4 is running with 2 seconds left
+Process 4 (PID=<226565>): I found this triangular number 483636
+Scheduler: Runtime: 5 seconds
+Scheduler: Process 4 is running with 1 seconds left
+Scheduler: Runtime: 6 seconds
+Scheduler: Process 4 is running with 0 seconds left
+Scheduler: Terminating Process 4 (Remaining Time: 0)
+Process 4 (PID=<226565>): count of triangulars found so far is 3
+Process 4: terminating....
+Scheduler: Starting Process 5 (Remaining Time: 1)
+Process 5 (PID=<226570>): has been started
+Process 5 (PID=<226570>): will find the next trianguar number from (13507, inf)
+Process 5 (PID=<226570>): I found this triangular number 13530
+Process 5 (PID=<226570>): I found this triangular number 13695
+Process 5 (PID=<226570>): I found this triangular number 13861
+Process 5 (PID=<226570>): I found this triangular number 14028
+Process 5 (PID=<226570>): I found this triangular number 14196
+Process 5 (PID=<226570>): I found this triangular number 14365
+Process 5 (PID=<226570>): I found this triangular number 14535
+Process 5 (PID=<226570>): I found this triangular number 14706
+Process 5 (PID=<226570>): I found this triangular number 14878
+Process 5 (PID=<226570>): I found this triangular number 15051
+Process 5 (PID=<226570>): I found this triangular number 15225
+Process 5 (PID=<226570>): I found this triangular number 15400
+Process 5 (PID=<226570>): I found this triangular number 15576
+Process 5 (PID=<226570>): I found this triangular number 15753
+Process 5 (PID=<226570>): I found this triangular number 15931
+Process 5 (PID=<226570>): I found this triangular number 16110
+Process 5 (PID=<226570>): I found this triangular number 16290
+Process 5 (PID=<226570>): I found this triangular number 16471
+Process 5 (PID=<226570>): I found this triangular number 16653
+Process 5 (PID=<226570>): I found this triangular number 16836
+Process 5 (PID=<226570>): I found this triangular number 17020
+Process 5 (PID=<226570>): I found this triangular number 17205
+Process 5 (PID=<226570>): I found this triangular number 17391
+Process 5 (PID=<226570>): I found this triangular number 17578
+Process 5 (PID=<226570>): I found this triangular number 17766
+Process 5 (PID=<226570>): I found this triangular number 17955
+Process 5 (PID=<226570>): I found this triangular number 18145
+Process 5 (PID=<226570>): I found this triangular number 18336
+Process 5 (PID=<226570>): I found this triangular number 18528
+Process 5 (PID=<226570>): I found this triangular number 18721
+Process 5 (PID=<226570>): I found this triangular number 18915
+Process 5 (PID=<226570>): I found this triangular number 19110
+Process 5 (PID=<226570>): I found this triangular number 19306
+Process 5 (PID=<226570>): I found this triangular number 19503
+Process 5 (PID=<226570>): I found this triangular number 19701
+Process 5 (PID=<226570>): I found this triangular number 19900
+Process 5 (PID=<226570>): I found this triangular number 20100
+Process 5 (PID=<226570>): I found this triangular number 20301
+Process 5 (PID=<226570>): I found this triangular number 20503
+Process 5 (PID=<226570>): I found this triangular number 20706
+Process 5 (PID=<226570>): I found this triangular number 20910
+Process 5 (PID=<226570>): I found this triangular number 21115
+Process 5 (PID=<226570>): I found this triangular number 21321
+Process 5 (PID=<226570>): I found this triangular number 21528
+Process 5 (PID=<226570>): I found this triangular number 21736
+Process 5 (PID=<226570>): I found this triangular number 21945
+Process 5 (PID=<226570>): I found this triangular number 22155
+Process 5 (PID=<226570>): I found this triangular number 22366
+Process 5 (PID=<226570>): I found this triangular number 22578
+Process 5 (PID=<226570>): I found this triangular number 22791
+Process 5 (PID=<226570>): I found this triangular number 23005
+Process 5 (PID=<226570>): I found this triangular number 23220
+Process 5 (PID=<226570>): I found this triangular number 23436
+Process 5 (PID=<226570>): I found this triangular number 23653
+Process 5 (PID=<226570>): I found this triangular number 23871
+Process 5 (PID=<226570>): I found this triangular number 24090
+Process 5 (PID=<226570>): I found this triangular number 24310
+Process 5 (PID=<226570>): I found this triangular number 24531
+Process 5 (PID=<226570>): I found this triangular number 24753
+Process 5 (PID=<226570>): I found this triangular number 24976
+Process 5 (PID=<226570>): I found this triangular number 25200
+Process 5 (PID=<226570>): I found this triangular number 25425
+Process 5 (PID=<226570>): I found this triangular number 25651
+Process 5 (PID=<226570>): I found this triangular number 25878
+Process 5 (PID=<226570>): I found this triangular number 26106
+Process 5 (PID=<226570>): I found this triangular number 26335
+Process 5 (PID=<226570>): I found this triangular number 26565
+Process 5 (PID=<226570>): I found this triangular number 26796
+Process 5 (PID=<226570>): I found this triangular number 27028
+Process 5 (PID=<226570>): I found this triangular number 27261
+Process 5 (PID=<226570>): I found this triangular number 27495
+Process 5 (PID=<226570>): I found this triangular number 27730
+Process 5 (PID=<226570>): I found this triangular number 27966
+Process 5 (PID=<226570>): I found this triangular number 28203
+Process 5 (PID=<226570>): I found this triangular number 28441
+Process 5 (PID=<226570>): I found this triangular number 28680
+Process 5 (PID=<226570>): I found this triangular number 28920
+Process 5 (PID=<226570>): I found this triangular number 29161
+Scheduler: Runtime: 7 seconds
+Scheduler: Process 5 is running with 0 seconds left
+Scheduler: Terminating Process 5 (Remaining Time: 0)
+Process 5 (PID=<226570>): count of triangulars found so far is 78
+Process 5: terminating....
+Scheduler: Starting Process 0 (Remaining Time: 2)
+Process 0 (PID=<226571>): has been started
+Process 0 (PID=<226571>): will find the next trianguar number from (117001, inf)
+Process 0 (PID=<226571>): I found this triangular number 117370
+Process 0 (PID=<226571>): I found this triangular number 117855
+Process 0 (PID=<226571>): I found this triangular number 118341
+Process 0 (PID=<226571>): I found this triangular number 118828
+Process 0 (PID=<226571>): I found this triangular number 119316
+Process 0 (PID=<226571>): I found this triangular number 119805
+Scheduler: Runtime: 8 seconds
+Scheduler: Process 0 is running with 1 seconds left
+Process 0 (PID=<226571>): I found this triangular number 120295
+Process 0 (PID=<226571>): I found this triangular number 120786
+Process 0 (PID=<226571>): I found this triangular number 121278
+Process 0 (PID=<226571>): I found this triangular number 121771
+Process 0 (PID=<226571>): I found this triangular number 122265
+Scheduler: Runtime: 9 seconds
+Scheduler: Process 0 is running with 0 seconds left
+Scheduler: Terminating Process 0 (Remaining Time: 0)
+Process 0 (PID=<226571>): count of triangulars found so far is 11
+Process 0: terminating....
+Scheduler: Starting Process 1 (Remaining Time: 6)
+Process 1 (PID=<226572>): has been started
+Process 1 (PID=<226572>): will find the next trianguar number from (237206, inf)
+Process 1 (PID=<226572>): I found this triangular number 237705
+Process 1 (PID=<226572>): I found this triangular number 238395
+Scheduler: Runtime: 10 seconds
+Scheduler: Process 1 is running with 5 seconds left
+Process 1 (PID=<226572>): I found this triangular number 239086
+Process 1 (PID=<226572>): I found this triangular number 239778
+Scheduler: Runtime: 11 seconds
+Scheduler: Process 1 is running with 4 seconds left
+Process 1 (PID=<226572>): I found this triangular number 240471
+Process 1 (PID=<226572>): I found this triangular number 241165
+Scheduler: Runtime: 12 seconds
+Scheduler: Process 1 is running with 3 seconds left
+Process 1 (PID=<226572>): I found this triangular number 241860
+Process 1 (PID=<226572>): I found this triangular number 242556
+Scheduler: Runtime: 13 seconds
+Scheduler: Process 1 is running with 2 seconds left
+Process 1 (PID=<226572>): I found this triangular number 243253
+Process 1 (PID=<226572>): I found this triangular number 243951
+Scheduler: Runtime: 14 seconds
+Scheduler: Process 1 is running with 1 seconds left
+Process 1 (PID=<226572>): I found this triangular number 244650
+Process 1 (PID=<226572>): I found this triangular number 245350
+Scheduler: Runtime: 15 seconds
+Scheduler: Process 1 is running with 0 seconds left
+Scheduler: Terminating Process 1 (Remaining Time: 0)
+Process 1 (PID=<226572>): count of triangulars found so far is 12
+Process 1: terminating....
+Scheduler: Starting Process 6 (Remaining Time: 6)
+Process 6 (PID=<226575>): has been started
+Process 6 (PID=<226575>): will find the next trianguar number from (394831, inf)
+Process 6 (PID=<226575>): I found this triangular number 395605
+Scheduler: Runtime: 16 seconds
+Scheduler: Process 6 is running with 5 seconds left
+Process 6 (PID=<226575>): I found this triangular number 396495
+Scheduler: Runtime: 17 seconds
+Scheduler: Process 6 is running with 4 seconds left
+Scheduler: Runtime: 18 seconds
+Scheduler: Process 6 is running with 3 seconds left
+Process 6 (PID=<226575>): I found this triangular number 397386
+Scheduler: Runtime: 19 seconds
+Scheduler: Process 6 is running with 2 seconds left
+Process 6 (PID=<226575>): I found this triangular number 398278
+Scheduler: Runtime: 20 seconds
+Scheduler: Process 6 is running with 1 seconds left
+Process 6 (PID=<226575>): I found this triangular number 399171
+Scheduler: Runtime: 21 seconds
+Scheduler: Process 6 is running with 0 seconds left
+Scheduler: Terminating Process 6 (Remaining Time: 0)
+Process 6 (PID=<226575>): count of triangulars found so far is 5
+Process 6: terminating....
+Scheduler: Starting Process 2 (Remaining Time: 3)
+Process 2 (PID=<226613>): has been started
+Process 2 (PID=<226613>): will find the next trianguar number from (656323, inf)
+Scheduler: Runtime: 22 seconds
+Scheduler: Process 2 is running with 2 seconds left
+Process 2 (PID=<226613>): I found this triangular number 657231
+Scheduler: Runtime: 23 seconds
+Scheduler: Process 2 is running with 1 seconds left
+Scheduler: Runtime: 24 seconds
+Scheduler: Process 2 is running with 0 seconds left
+Scheduler: Terminating Process 2 (Remaining Time: 0)
+Process 2 (PID=<226613>): count of triangulars found so far is 1
+Process 2: terminating....
+Scheduler: Starting Process 3 (Remaining Time: 8)
+Process 3 (PID=<226622>): has been started
+Process 3 (PID=<226622>): will find the next trianguar number from (317088, inf)
+Process 3 (PID=<226622>): I found this triangular number 317206
+Process 3 (PID=<226622>): I found this triangular number 318003
+Scheduler: Runtime: 25 seconds
+Scheduler: Process 3 is running with 7 seconds left
+Process 3 (PID=<226622>): I found this triangular number 318801
+Scheduler: Runtime: 26 seconds
+Scheduler: Process 3 is running with 6 seconds left
+Process 3 (PID=<226622>): I found this triangular number 319600
+Scheduler: Runtime: 27 seconds
+Scheduler: Process 3 is running with 5 seconds left
+Process 3 (PID=<226622>): I found this triangular number 320400
+Process 3 (PID=<226622>): I found this triangular number 321201
+Scheduler: Runtime: 28 seconds
+Scheduler: Process 3 is running with 4 seconds left
+Process 3 (PID=<226622>): I found this triangular number 322003
+Scheduler: Runtime: 29 seconds
+Scheduler: Process 3 is running with 3 seconds left
+Process 3 (PID=<226622>): I found this triangular number 322806
+Scheduler: Runtime: 30 seconds
+Scheduler: Process 3 is running with 2 seconds left
+Process 3 (PID=<226622>): I found this triangular number 323610
+Scheduler: Runtime: 31 seconds
+Scheduler: Process 3 is running with 1 seconds left
+Process 3 (PID=<226622>): I found this triangular number 324415
+Process 3 (PID=<226622>): I found this triangular number 325221
+Scheduler: Runtime: 32 seconds
+Scheduler: Process 3 is running with 0 seconds left
+Scheduler: Terminating Process 3 (Remaining Time: 0)
+Process 3 (PID=<226622>): count of triangulars found so far is 11
+Process 3: terminating....
+Simulation results.....
+process 0: 
+	at=5
+	bt=2
+	ct=9
+	wt=2
+	tat=4
+	rt=2
+process 1: 
+	at=7
+	bt=6
+	ct=15
+	wt=2
+	tat=8
+	rt=2
+process 2: 
+	at=20
+	bt=3
+	ct=24
+	wt=1
+	tat=4
+	rt=1
+process 3: 
+	at=3
+	bt=8
+	ct=32
+	wt=21
+	tat=29
+	rt=21
+process 4: 
+	at=2
+	bt=4
+	ct=6
+	wt=0
+	tat=4
+	rt=0
+process 5: 
+	at=3
+	bt=1
+	ct=7
+	wt=3
+	tat=4
+	rt=3
+process 6: 
+	at=10
+	bt=6
+	ct=21
+	wt=5
+	tat=11
+	rt=5
+data size = 7
+Average results for this run:
+	avg_wt=4.857143
+	avg_tat=9.142858
