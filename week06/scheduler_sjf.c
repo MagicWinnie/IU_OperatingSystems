@@ -142,7 +142,7 @@ ProcessData find_next_process()
         // Considering the scheduling algorithm SJF
         if (data[i].burst <= 0)
             continue;
-        int time_diff = data[i].at - total_time;
+        int time_diff = data[i].at - (int)total_time;
         if (time_diff < 0)
             time_diff = 0;
         if (time_diff < min_time_diff)
