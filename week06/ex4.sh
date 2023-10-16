@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ $# -eq 0 ]
     then
         echo "Uh-oh! Path to the input file should be provided!"

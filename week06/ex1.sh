@@ -1,4 +1,6 @@
 gcc agent.c -o agent.out
+#!/bin/bash
+
 gcc controller.c -o controller.out
 
 gnome-terminal --title="AGENT" -- bash -c "./agent.out; exec bash" &
