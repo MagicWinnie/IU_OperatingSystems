@@ -105,8 +105,9 @@ void terminate(pid_t process)
 void create_process(int new_process)
 {
     // stop the running process
-    // if (running_process != -1)
-    //     suspend(ps[running_process]);
+    // NOTE: FCFS is non-preemptive, it does not need suspending, but due to Q.117 I HAVE to implement it.
+    if (running_process != -1)
+        suspend(ps[running_process]);
 
     // fork a new process and add it to ps array
     pid_t new_process_pid = fork();
@@ -239,19 +240,44 @@ void schedule_handler(int signum)
         }
     }
 
-    if (running_process == -1)
+    // 2. After that, we need to find the next process to run {next_process}.
+    ProcessData next_process = find_next_process();
+
+    // this call will check the bursts of all processes
+    check_burst();
+
+    // 3. If {next_process} is not running, then we need to check the current process
+    if (running_process != next_process.idx)
     {
-        // 2. After that, we need to find the next process to run {next_process}.
-        ProcessData next_process = find_next_process();
+        // 3.A. If the current process is running, then we should stop the current running process
+        // and print the message:
+        // "Scheduler: Stopping Process {running_process} (Remaining Time: {data[running_process].burst}
+        // NOTE: FCFS is non-preemptive, it does not need suspending, but due to Q.117 I HAVE to implement it.
+        if (running_process != -1)
+        {
+            suspend(ps[running_process]);
+            printf("Scheduler: Stopping Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
+        }
 
-        // this call will check the bursts of all processes
-        check_burst();
+        // 3.B. set current process {next_process} as the running process.
+        running_process = next_process.idx;
 
-        // then create a new process for {running_process} and print the message:
-        create_process(next_process.idx);
-        printf("Scheduler: Starting Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
-        // Here we have the first response to the process {running_process} and we can calculate the metric {rt}
-        data[running_process].rt = total_time - data[running_process].at;
+        if (data[running_process].burst == data[running_process].bt)
+        {
+            // 3.C.1. then create a new process for {running_process} and print the message:
+            // "Scheduler: Starting Process {running_process} (Remaining Time: {data[running_process].burst})"
+            // Here we have the first response to the process {running_process} and we can calculate the metric {rt}
+            create_process(running_process);
+            printf("Scheduler: Starting Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
+            data[running_process].rt = total_time - data[running_process].at;
+        }
+        else
+        {
+            // 3.C.2. or resume the process {running_process} if it is stopped and print the message:
+            // "Scheduler: Resuming Process {running_process} (Remaining Time: {data[running_process].burst})"
+            resume(ps[running_process]);
+            printf("Scheduler: Resuming Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
+        }
     }
 }
 
