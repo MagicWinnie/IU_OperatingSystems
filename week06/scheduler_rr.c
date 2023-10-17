@@ -109,6 +109,10 @@ void terminate(pid_t process)
 // create a process using fork
 void create_process(int new_process)
 {
+    // stop the running process
+    if (running_process != -1)
+        suspend(ps[running_process]);
+
     // fork a new process and add it to ps array
     pid_t new_process_pid = fork();
     if (new_process_pid == 0)
@@ -142,6 +146,18 @@ ProcessData find_next_process()
         // Considering the scheduling algorithm RR
         if (data[i].burst <= 0)
             continue;
+        if (i == running_process)
+        {
+            if (data[running_process].quantum > 0)
+            {
+                location = i;
+                break;
+            }
+            else
+            {
+                continue;
+            }
+        }
         if (data[i].last_executed == -1 && data[i].at - (int)total_time < min_time_diff)
         {
             min_time_diff = data[i].at - total_time;
@@ -245,57 +261,48 @@ void schedule_handler(int signum)
             ps[running_process] = 0;
             running_process = -1;
         }
-        else if (data[running_process].quantum == 0)
-        {
-            printf("Scheduler: Stopping Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
-            data[running_process].last_executed = total_time;
-            suspend(ps[running_process]);
-            ProcessData next_process = find_next_process();
-            if (next_process.quantum == quantum)
-            {
-                // 3.C.1. then create a new process for {running_process} and print the message:
-                create_process(next_process.idx);
-                printf("Scheduler: Starting Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
-                // Here we have the first response to the process {running_process} and we can calculate the metric {rt}
-                data[running_process].rt = total_time - data[running_process].at;
-            }
-            else
-            {
-                // 3.B. set current process {next_process} as the running process.
-                running_process = next_process.idx;
-                data[running_process].quantum = quantum;
-                // 3.C.2. or resume the process {running_process} if it is stopped and print the message:
-                printf("Scheduler: Resuming Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
-                resume(ps[running_process]);
-            }
-        }
     }
 
-    if (running_process == -1)
+    // 2. After that, we need to find the next process to run {next_process}.
+    ProcessData next_process = find_next_process();
+
+    // this call will check the bursts of all processes
+    check_burst();
+
+    // 3. If {next_process} is not running, then we need to check the current process
+    if (running_process != next_process.idx)
     {
-        // 2. After that, we need to find the next process to run {next_process}.
-        ProcessData next_process = find_next_process();
+        // 3.A. If the current process is running, then we should stop the current running process
+        // and print the message:
+        // "Scheduler: Stopping Process {running_process} (Remaining Time: {data[running_process].burst}
+        // NOTE: SJF is non-preemptive, it does not need suspending, but due to Q.117 I HAVE to implement it.
+        if (running_process != -1)
+        {
+            data[running_process].last_executed = total_time;
+            suspend(ps[running_process]);
+            printf("Scheduler: Stopping Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
+        }
 
-        // this call will check the bursts of all processes
-        check_burst();
+        // 3.B. set current process {next_process} as the running process.
+        running_process = next_process.idx;
 
-        // then create a new process for {running_process} and print the message:
-        if (next_process.quantum == quantum)
+        if (data[running_process].burst == data[running_process].bt)
         {
             // 3.C.1. then create a new process for {running_process} and print the message:
-            create_process(next_process.idx);
-            printf("Scheduler: Starting Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
+            // "Scheduler: Starting Process {running_process} (Remaining Time: {data[running_process].burst})"
             // Here we have the first response to the process {running_process} and we can calculate the metric {rt}
+            create_process(running_process);
+            printf("Scheduler: Starting Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
             data[running_process].rt = total_time - data[running_process].at;
         }
         else
         {
-            // 3.B. set current process {next_process} as the running process.
-            running_process = next_process.idx;
-            data[running_process].quantum = quantum;
             // 3.C.2. or resume the process {running_process} if it is stopped and print the message:
-            printf("Scheduler: Resuming Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
+            // "Scheduler: Resuming Process {running_process} (Remaining Time: {data[running_process].burst})"
+            // NOTE: SJF is non-preemptive, it does not need resuming, but due to Q.117 I HAVE to implement it.
+            data[running_process].quantum = quantum;
             resume(ps[running_process]);
+            printf("Scheduler: Resuming Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
         }
     }
 }
