@@ -275,6 +275,7 @@ void schedule_handler(int signum)
         {
             // 3.C.2. or resume the process {running_process} if it is stopped and print the message:
             // "Scheduler: Resuming Process {running_process} (Remaining Time: {data[running_process].burst})"
+            // NOTE: FCFS is non-preemptive, it does not need suspending, but due to Q.117 I HAVE to implement it.
             resume(ps[running_process]);
             printf("Scheduler: Resuming Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
         }
