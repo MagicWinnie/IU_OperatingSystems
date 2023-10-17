@@ -140,6 +140,7 @@ ProcessData find_next_process()
     // location of next process in {data} array
     int location = 0;
     int min_time_diff = 100000000;
+    int tmp = 0;
     for (int i = 0; i < data_size; i++)
     {
         // find location of the next process to run from the {data} array
@@ -152,10 +153,6 @@ ProcessData find_next_process()
             {
                 location = i;
                 break;
-            }
-            else
-            {
-                continue;
             }
         }
         if (data[i].last_executed == -1 && data[i].at - (int)total_time < min_time_diff)
@@ -254,11 +251,19 @@ void schedule_handler(int signum)
 
             waitpid(ps[running_process], NULL, 0);
 
+            data[running_process].quantum = 0;
             data[running_process].ct = total_time;
             data[running_process].tat = total_time - data[running_process].at;
             data[running_process].wt = data[running_process].tat - data[running_process].bt;
 
             ps[running_process] = 0;
+            running_process = -1;
+        }
+        else if (data[running_process].quantum == 0)
+        {
+            data[running_process].last_executed = total_time;
+            suspend(ps[running_process]);
+            printf("Scheduler: Stopping Process %d (Remaining Time: %d)\n", running_process, data[running_process].burst);
             running_process = -1;
         }
     }
