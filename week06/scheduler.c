@@ -135,15 +135,14 @@ ProcessData find_next_process()
 {
     // location of next process in {data} array
     int location = 0;
-    int min_time_diff = 100000000;
+    int min_at = 100000000;
     for (int i = 0; i < data_size; i++)
     {
         // find location of the next process to run from the {data} array
         // Considering the scheduling algorithm FCFS
-        int time_diff = data[i].at - (int)total_time;
-        if (time_diff < min_time_diff && data[i].burst > 0)
+        if (data[i].at < min_at && data[i].burst > 0)
         {
-            min_time_diff = time_diff;
+            min_at = data[i].at;
             location = i;
         }
     }
