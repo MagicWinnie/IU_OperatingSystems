@@ -1,0 +1,13 @@
+For the provided `queries.txt` file my solution printed this values:
+
+First fit: 104.390793
+Best fit: 32.040252
+Worst fit: 27.605668
+
+It clearly shows that first fit algorithm is much faster than other methods.
+This is because it doesn't traverse the whole array and returns the first
+found suitable free block. Best fit algorithm is much slower than first fit
+because it searches for all suitable free blocks and finds the smallest one.
+Worst fit perfoms the worst :). It likely happens because it has to find the
+biggest block, therefore, traversing through blocks of bigger sizes, which
+takes a little more time.
