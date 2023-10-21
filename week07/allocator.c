@@ -184,6 +184,8 @@ int main(void)
 
     double throughput;
 
+    printf("Throughput (queries per second):\n");
+
     throughput = process(queries, allocate_first_fit);
     printf("First fit: %f\n", throughput);
 
