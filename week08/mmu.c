@@ -83,7 +83,10 @@ int main(int argc, char *argv[])
         argv[i][0] = '0';
         int place = atoi(argv[i]);
 
-        printf("Read request for page %d\n", place);
+        if (cmd == 'R')
+            printf("Read request for page %d\n", place);
+        else
+            printf("Write request for page %d\n", place);
 
         if (place >= P)
         {
