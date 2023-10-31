@@ -3,3 +3,7 @@ The output of me running `./ex3.sh` can be found in `ex3_log.txt`.
 Both `si` and `so` remain 0 throughout the work of the program as my machine has enough RAM not to swap anything out.
 Memory usage increases as I do not free allocated memory. If you uncomment `free` line, memory usage will remain constant
 as allocated memory will be freed.
+
+If `SIZE` is changed from 10 MiB to 1 GiB and memory is not freed, `so` starts increasing as my machine tries to free my
+RAM for the allocated memory by swapping out other data to my hard drive. After the program ends `si` starts increasing to
+swap in the swapped out data.
