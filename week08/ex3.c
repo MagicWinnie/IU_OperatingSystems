@@ -21,7 +21,7 @@ int main(void)
 
         sleep(1);
 
-        free(ptr);
+        // free(ptr);
     }
 
     return EXIT_SUCCESS;
