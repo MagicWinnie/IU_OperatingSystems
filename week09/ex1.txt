@@ -32,4 +32,7 @@ Aging:
         Disk accesses: 1492
         Hit ratio: 0.7%
 
-
+Random algorithm seems to perform the best as for 128 and 8 frames it gives the highest of hit ratios.
+NFU and Aging algorithms output the same results for all number of frames. Which seems strange.
+For all algorithms when lowering down the number of frames, hit ratio lowers down as we have to make
+more page faults.
