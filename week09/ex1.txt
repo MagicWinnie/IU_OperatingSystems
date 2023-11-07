@@ -1,0 +1,35 @@
+I have executed the program for all three algorithms using the same input for three different values of number of frames.
+The results can be seen here:
+
+Random:
+    Number of frames: 128
+        Disk accesses: 1269
+        Hit ratio: 13%
+    Number of frames: 32
+        Disk accesses: 1449
+        Hit ratio: 3.2%
+    Number of frames: 8
+        Disk accesses: 1492
+        Hit ratio: 0.8%
+NFU:
+    Number of frames: 128
+        Disk accesses: 1264
+        Hit ratio: 12.3%
+    Number of frames: 32
+        Disk accesses: 1439
+        Hit ratio: 3.3%
+    Number of frames: 8
+        Disk accesses: 1492
+        Hit ratio: 0.7%
+Aging:
+    Number of frames: 128
+        Disk accesses: 1264
+        Hit ratio: 12.3%
+    Number of frames: 32
+        Disk accesses: 1439
+        Hit ratio: 3.3%
+    Number of frames: 8
+        Disk accesses: 1492
+        Hit ratio: 0.7%
+
+
