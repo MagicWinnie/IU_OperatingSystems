@@ -1,0 +1,795 @@
+=====================================
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/ex1_test.sh
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/ex1.c
+File type:                regular file
+I-node number:            3936137
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                7577 bytes
+Blocks allocated:         16
+Last status change:       Thu Nov  9 13:18:40 2023
+Last file access:         Thu Nov  9 13:19:11 2023
+Last file modification:   Thu Nov  9 13:18:40 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/ex1.sh
+File type:                regular file
+I-node number:            3935947
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                226 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:21:05 2023
+Last file access:         Thu Nov  9 13:21:05 2023
+Last file modification:   Thu Nov  9 13:21:05 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/ex1.out
+File type:                regular file
+I-node number:            3942936
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                22184 bytes
+Blocks allocated:         48
+Last status change:       Thu Nov  9 13:22:48 2023
+Last file access:         Thu Nov  9 13:22:48 2023
+Last file modification:   Thu Nov  9 13:22:48 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/monitor.c
+File type:                regular file
+I-node number:            3939944
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                6966 bytes
+Blocks allocated:         16
+Last status change:       Thu Nov  9 13:18:39 2023
+Last file access:         Thu Nov  9 13:19:10 2023
+Last file modification:   Thu Nov  9 13:18:39 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/monitor.out
+File type:                regular file
+I-node number:            3942557
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                18000 bytes
+Blocks allocated:         40
+Last status change:       Thu Nov  9 13:22:48 2023
+Last file access:         Thu Nov  9 13:22:48 2023
+Last file modification:   Thu Nov  9 13:22:48 2023
+-------------------------------------
+=====================================
+-------------------------------------
+ex1.sh is accessed
+File type:                regular file
+I-node number:            3935947
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                226 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:21:05 2023
+Last file access:         Thu Nov  9 13:21:05 2023
+Last file modification:   Thu Nov  9 13:21:05 2023
+-------------------------------------
+-------------------------------------
+test_folder is created
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+ex1.sh is accessed
+File type:                regular file
+I-node number:            3935947
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                226 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:21:05 2023
+Last file access:         Thu Nov  9 13:21:05 2023
+Last file modification:   Thu Nov  9 13:21:05 2023
+-------------------------------------
+-------------------------------------
+ex1.out is opened
+File type:                regular file
+I-node number:            3942936
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                22184 bytes
+Blocks allocated:         48
+Last status change:       Thu Nov  9 13:22:48 2023
+Last file access:         Thu Nov  9 13:22:48 2023
+Last file modification:   Thu Nov  9 13:22:48 2023
+-------------------------------------
+-------------------------------------
+ex1.out is accessed
+File type:                regular file
+I-node number:            3942936
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                22184 bytes
+Blocks allocated:         48
+Last status change:       Thu Nov  9 13:22:48 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:48 2023
+-------------------------------------
+-------------------------------------
+myfile1.txt is created
+File type:                regular file
+I-node number:            3943049
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                13 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+myfile1.txt is opened
+File type:                regular file
+I-node number:            3943049
+Mode:                     100664 (octal)
+Link count:               3
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                13 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+myfile1.txt is modified
+-------------------------------------
+-------------------------------------
+test_folder is opened
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+test_folder is accessed
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+test_folder is opened
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+test_folder is accessed
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+ex1.sh is accessed
+File type:                regular file
+I-node number:            3935947
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                226 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:21:05 2023
+Last file access:         Thu Nov  9 13:21:05 2023
+Last file modification:   Thu Nov  9 13:21:05 2023
+-------------------------------------
+-------------------------------------
+test_folder is opened
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+test_folder is accessed
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+test_folder is opened
+-------------------------------------
+-------------------------------------
+test_folder is accessed
+-------------------------------------
+-------------------------------------
+test_folder is deleted
+-------------------------------------
+-------------------------------------
+ex1.sh is accessed
+File type:                regular file
+I-node number:            3935947
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                226 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:21:05 2023
+Last file access:         Thu Nov  9 13:21:05 2023
+Last file modification:   Thu Nov  9 13:21:05 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is opened
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is opened
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+folder1 is created
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+f1.txt is created
+File type:                regular file
+I-node number:            3943049
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+f1.txt is opened
+File type:                regular file
+I-node number:            3943049
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+f1.txt is modified
+File type:                regular file
+I-node number:            3943049
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+f2.txt is created
+File type:                regular file
+I-node number:            3943112
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+f2.txt is opened
+File type:                regular file
+I-node number:            3943112
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+f2.txt is modified
+File type:                regular file
+I-node number:            3943112
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+folder1 is opened
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+folder1 is accessed
+File type:                directory
+I-node number:            3943024
+Mode:                     40775 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+f1.txt is opened
+File type:                regular file
+I-node number:            3943049
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+f1.txt is accessed
+File type:                regular file
+I-node number:            3943049
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+f2.txt is opened
+File type:                regular file
+I-node number:            3943112
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                7 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+f2.txt is modified
+File type:                regular file
+I-node number:            3943112
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                7 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+f1.txt is opened
+File type:                regular file
+I-node number:            3943049
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+f1.txt has metadata changed
+File type:                regular file
+I-node number:            3943049
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                1 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+f1.txt is deleted
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+folder1 has metadata changed
+File type:                directory
+I-node number:            3943024
+Mode:                     40275 (octal)
+Link count:               2
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                4096 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:22:51 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:51 2023
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+folder1 is deleted
+-------------------------------------
+-------------------------------------
+ex1_test.sh is accessed
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+f2.txt is deleted
+-------------------------------------
+^C=====================================
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/ex1_test.sh
+File type:                regular file
+I-node number:            3942794
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                165 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:20:01 2023
+Last file access:         Thu Nov  9 13:20:06 2023
+Last file modification:   Thu Nov  9 13:18:41 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/ex1.c
+File type:                regular file
+I-node number:            3936137
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                7577 bytes
+Blocks allocated:         16
+Last status change:       Thu Nov  9 13:18:40 2023
+Last file access:         Thu Nov  9 13:19:11 2023
+Last file modification:   Thu Nov  9 13:18:40 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/ex1.sh
+File type:                regular file
+I-node number:            3935947
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                226 bytes
+Blocks allocated:         8
+Last status change:       Thu Nov  9 13:21:05 2023
+Last file access:         Thu Nov  9 13:21:05 2023
+Last file modification:   Thu Nov  9 13:21:05 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/ex1.out
+File type:                regular file
+I-node number:            3942936
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                22184 bytes
+Blocks allocated:         48
+Last status change:       Thu Nov  9 13:22:48 2023
+Last file access:         Thu Nov  9 13:22:51 2023
+Last file modification:   Thu Nov  9 13:22:48 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/monitor.c
+File type:                regular file
+I-node number:            3939944
+Mode:                     100664 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                6966 bytes
+Blocks allocated:         16
+Last status change:       Thu Nov  9 13:18:39 2023
+Last file access:         Thu Nov  9 13:19:10 2023
+Last file modification:   Thu Nov  9 13:18:39 2023
+-------------------------------------
+-------------------------------------
+Path: /home/dmitriy/Projects/IU_OperatingSystems/week10/monitor.out
+File type:                regular file
+I-node number:            3942557
+Mode:                     100775 (octal)
+Link count:               1
+Ownership:                UID=1000   GID=1000
+Preferred I/O block size: 4096 bytes
+File size:                18000 bytes
+Blocks allocated:         40
+Last status change:       Thu Nov  9 13:22:48 2023
+Last file access:         Thu Nov  9 13:22:48 2023
+Last file modification:   Thu Nov  9 13:22:48 2023
+-------------------------------------
+=====================================
