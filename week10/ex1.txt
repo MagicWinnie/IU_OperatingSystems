@@ -1,0 +1,13 @@
+Output of `ex1.sh` can be found in `ex1.log`.
+Output of `monitor.c` can be found in `monitor.log`.
+
+1. Yes, `monitor.c` has reported a modification event for `myfile11.txt`.
+   `myfile11.txt` is a hard link, which means it points to the data of the
+   original file and `myfile11.txt` can be modified.
+2. No, `monitor.c` did not report any changes for `myfile13.txt`.
+   It happens because `myfile13.txt` is a symbolic link, which means it points
+   to the original file, not the data itself. So, modifying the original file
+   does not trigger any events.
+3. Number of hard links is equal to 2.
+   One is between `myfile11.txt` and the data of the original file. Second is between
+   `/tmp/myfile1.txt` and the data of the original file.
