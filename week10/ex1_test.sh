@@ -10,3 +10,4 @@ touch f1.txt
 rm f1.txt
 chmod u=w folder1
 rm -r folder1
+rm f2.txt

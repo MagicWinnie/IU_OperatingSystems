@@ -79,40 +79,42 @@ void find_all_hlinks(const char *source)
     char path[MAX_PATH_LENGTH];
 
     if ((dir = opendir(base_path)) == NULL)
-        perror("[ERROR] opendir() error");
-    else
     {
-        while ((entry = readdir(dir)) != NULL)
+        perror("[ERROR] opendir() error");
+        fprintf(stderr, "[ERROR] path: %s\n", base_path);
+        exit(EXIT_FAILURE);
+    }
+
+    while ((entry = readdir(dir)) != NULL)
+    {
+        struct stat entry_stat;
+        if (entry->d_name[0] != '.')
         {
-            struct stat entry_stat;
-            if (entry->d_name[0] != '.')
+            strcpy(path, base_path);
+            strcat(path, "/");
+            strcat(path, entry->d_name);
+
+            if (lstat(path, &entry_stat) == -1)
             {
-                strcpy(path, base_path);
-                strcat(path, "/");
-                strcat(path, entry->d_name);
+                perror("[ERROR] lstat() error");
+                fprintf(stderr, "[ERROR] path: %s\n", path);
+                continue;
+            }
+            if (S_ISDIR(entry_stat.st_mode))
+                continue;
 
-                if (lstat(path, &entry_stat) == -1)
+            if (entry_stat.st_ino == source_stat.st_ino)
+            {
+                char *resolved_path = realpath(path, NULL);
+                if (resolved_path)
                 {
-                    perror("[ERROR] lstat() error");
-                    fprintf(stderr, "[ERROR] path: %s\n", path);
-                    continue;
-                }
-                if (S_ISDIR(entry_stat.st_mode))
-                    continue;
-
-                if (entry_stat.st_ino == source_stat.st_ino)
-                {
-                    char *resolved_path = realpath(path, NULL);
-                    if (resolved_path)
-                    {
-                        printf("inode: %lu, path: %s\n", entry_stat.st_ino, resolved_path);
-                        free(resolved_path);
-                    }
+                    printf("inode: %lu, path: %s\n", entry_stat.st_ino, resolved_path);
+                    free(resolved_path);
                 }
             }
         }
-        closedir(dir);
     }
+    closedir(dir);
 }
 
 void unlink_all(const char *source)
@@ -133,51 +135,53 @@ void unlink_all(const char *source)
     struct dirent *entry;
 
     if ((dir = opendir(base_path)) == NULL)
-        perror("[ERROR] opendir() error");
-    else
     {
-        char *last_link_path = NULL;
-        while ((entry = readdir(dir)) != NULL)
+        perror("[ERROR] opendir() error");
+        fprintf(stderr, "[ERROR] path: %s\n", base_path);
+        exit(EXIT_FAILURE);
+    }
+
+    char *last_link_path = NULL;
+    while ((entry = readdir(dir)) != NULL)
+    {
+        struct stat entry_stat;
+        if (entry->d_name[0] != '.')
         {
-            struct stat entry_stat;
-            if (entry->d_name[0] != '.')
+            strcpy(path, base_path);
+            strcat(path, "/");
+            strcat(path, entry->d_name);
+
+            if (lstat(path, &entry_stat) == -1)
             {
-                strcpy(path, base_path);
-                strcat(path, "/");
-                strcat(path, entry->d_name);
+                perror("[ERROR] lstat() error");
+                fprintf(stderr, "[ERROR] path: %s\n", path);
+                continue;
+            }
+            if (S_ISDIR(entry_stat.st_mode))
+                continue;
 
-                if (lstat(path, &entry_stat) == -1)
+            if (entry_stat.st_ino == source_stat.st_ino)
+            {
+                if (last_link_path)
                 {
-                    perror("[ERROR] lstat() error");
-                    fprintf(stderr, "[ERROR] path: %s\n", path);
-                    continue;
-                }
-                if (S_ISDIR(entry_stat.st_mode))
-                    continue;
-
-                if (entry_stat.st_ino == source_stat.st_ino)
-                {
-                    if (last_link_path)
+                    if (unlink(last_link_path) == -1)
                     {
-                        if (unlink(last_link_path) == -1)
-                        {
-                            perror("unlink");
-                            exit(EXIT_FAILURE);
-                        }
+                        perror("unlink");
+                        exit(EXIT_FAILURE);
                     }
-                    last_link_path = realpath(path, NULL);
                 }
+                last_link_path = realpath(path, NULL);
             }
         }
-        if (last_link_path)
-        {
-            printf("The last hard link path: %s\n", last_link_path);
-            print_stat(last_link_path);
-            free(last_link_path);
-        }
-
-        closedir(dir);
     }
+    if (last_link_path)
+    {
+        printf("The last hard link path: %s\n", last_link_path);
+        print_stat(last_link_path);
+        free(last_link_path);
+    }
+
+    closedir(dir);
 }
 
 void modify(const char *work_dir, const char *source)

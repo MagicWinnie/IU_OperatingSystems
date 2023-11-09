@@ -40,44 +40,46 @@ void add_dir_subdirs(const char *fn, uint32_t mask)
     int i = 1;
 
     if ((dir = opendir(fn)) == NULL)
-        perror("[ERROR] opendir() error");
-    else
     {
-        while ((entry = readdir(dir)) != NULL)
+        perror("[ERROR] opendir() error");
+        fprintf(stderr, "[ERROR] path: %s\n", fn);
+        exit(EXIT_FAILURE);
+    }
+
+    while ((entry = readdir(dir)) != NULL)
+    {
+        if (entry->d_name[0] != '.')
         {
-            if (entry->d_name[0] != '.')
+            strcpy(path, fn);
+            strcat(path, "/");
+            strcat(path, entry->d_name);
+            if (stat(path, &info) != 0)
             {
-                strcpy(path, fn);
-                strcat(path, "/");
-                strcat(path, entry->d_name);
-                if (stat(path, &info) != 0)
+                fprintf(stderr, "[ERROR] stat() error on %s\n", path);
+                exit(EXIT_FAILURE);
+            }
+            if (S_ISDIR(info.st_mode))
+            {
+                // printf("%s\n", path);
+                wd_ = inotify_add_watch(fd, path, mask);
+                if (wd_ == -1)
                 {
-                    fprintf(stderr, "[ERROR] stat() error on %s\n", path);
+                    perror("[ERROR] inotify add watch");
+                    fprintf(stderr, "[ERROR] Path: %s\n", path);
                     exit(EXIT_FAILURE);
                 }
-                if (S_ISDIR(info.st_mode))
+                wd[i] = wd_;
+                i++;
+                if (i == MAX_FILE_AMOUNT)
                 {
-                    // printf("%s\n", path);
-                    wd_ = inotify_add_watch(fd, path, mask);
-                    if (wd_ == -1)
-                    {
-                        perror("[ERROR] inotify add watch");
-                        fprintf(stderr, "[ERROR] Path: %s\n", path);
-                        exit(EXIT_FAILURE);
-                    }
-                    wd[i] = wd_;
-                    i++;
-                    if (i == MAX_FILE_AMOUNT)
-                    {
-                        fprintf(stderr, "[ERROR] Maximum amount of files/dirs achieved\n");
-                        exit(EXIT_FAILURE);
-                    }
+                    fprintf(stderr, "[ERROR] Maximum amount of files/dirs achieved\n");
+                    exit(EXIT_FAILURE);
                 }
             }
         }
-        wd[i] = -1; // end of watch descriptors
-        closedir(dir);
     }
+    wd[i] = -1; // end of watch descriptors
+    closedir(dir);
 }
 
 void print_stat(const char *fn)
@@ -142,26 +144,24 @@ void print_stats(const char *fn)
     char path[MAX_PATH_LENGTH];
 
     if ((dir = opendir(fn)) == NULL)
-        perror("[ERROR] opendir() error");
-    else
+        return;
+
+    printf("=====================================\n");
+    while ((entry = readdir(dir)) != NULL)
     {
-        printf("=====================================\n");
-        while ((entry = readdir(dir)) != NULL)
+        if (entry->d_name[0] != '.')
         {
-            if (entry->d_name[0] != '.')
-            {
-                strcpy(path, fn);
-                strcat(path, "/");
-                strcat(path, entry->d_name);
-                printf("-------------------------------------\n");
-                printf("Path: %s\n", path);
-                print_stat(path);
-                printf("-------------------------------------\n");
-            }
+            strcpy(path, fn);
+            strcat(path, "/");
+            strcat(path, entry->d_name);
+            printf("-------------------------------------\n");
+            printf("Path: %s\n", path);
+            print_stat(path);
+            printf("-------------------------------------\n");
         }
-        closedir(dir);
-        printf("=====================================\n");
     }
+    closedir(dir);
+    printf("=====================================\n");
 }
 
 void remove_watches()
