@@ -1,7 +1,5 @@
 #!/bin/bash
 
-mkdir -p ex23/
-
 ./gen.sh 10 ex23/ex1.txt
 
 ln ex23/ex1.txt ex23/ex11.txt
@@ -35,5 +33,3 @@ stat -c "%h" ex23/ex1.txt
 
 rm /tmp/ex13.txt
 find . -inum $(stat -c "%i" ex23/ex1.txt) -exec rm {} \;
-
-rm -rf ex23/
