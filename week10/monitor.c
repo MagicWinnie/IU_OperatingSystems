@@ -194,6 +194,8 @@ int main(int argc, char *argv[])
     signal(SIGINT, terminate);
 
     strcpy(base_path, argv[1]);
+    if (strlen(base_path) > 0 && base_path[strlen(base_path) - 1] == '/')
+        base_path[strlen(base_path) - 1] = '\0';
     print_stats(base_path);
 
     fd = inotify_init();
