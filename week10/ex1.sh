@@ -1,13 +1,18 @@
 #!/bin/bash
 
+watched_dir="watched_dir"
+
 gcc monitor.c -o monitor.out
 gcc ex1.c -o ex1.out
 
-gnome-terminal --title="MONITOR" -- bash -c "./monitor.out $(pwd); exec bash" &
+rm -rf $watched_dir
+mkdir -p $watched_dir
+
+gnome-terminal --title="MONITOR" -- bash -c "./monitor.out $watched_dir; exec bash" &
 sleep 3
 
-mkdir test_folder
-./ex1.out test_folder
-rm -r test_folder
+./ex1.out $watched_dir
 
-./ex1_test.sh
+cd $watched_dir
+../ex1_test.sh
+cd ..

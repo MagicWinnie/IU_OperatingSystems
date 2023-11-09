@@ -1,14 +1,14 @@
-inode: 3943049, path: /home/dmitriy/Projects/IU_OperatingSystems/week10/test_folder/myfile12.txt
-inode: 3943049, path: /home/dmitriy/Projects/IU_OperatingSystems/week10/test_folder/myfile11.txt
-The last hard link path: /home/dmitriy/Projects/IU_OperatingSystems/week10/test_folder/myfile11.txt
+inode: 3943301, path: /home/dmitriy/Projects/IU_OperatingSystems/week10/watched_dir/myfile12.txt
+inode: 3943301, path: /home/dmitriy/Projects/IU_OperatingSystems/week10/watched_dir/myfile11.txt
+The last hard link path: /home/dmitriy/Projects/IU_OperatingSystems/week10/watched_dir/myfile11.txt
 File type:                regular file
-I-node number:            3943049
+I-node number:            3943301
 Mode:                     100664 (octal)
 Link count:               2
 Ownership:                UID=1000   GID=1000
 Preferred I/O block size: 4096 bytes
 File size:                33 bytes
 Blocks allocated:         8
-Last status change:       Thu Nov  9 13:22:51 2023
-Last file access:         Thu Nov  9 13:22:51 2023
-Last file modification:   Thu Nov  9 13:22:51 2023
+Last status change:       Thu Nov  9 13:35:50 2023
+Last file access:         Thu Nov  9 13:35:50 2023
+Last file modification:   Thu Nov  9 13:35:50 2023
