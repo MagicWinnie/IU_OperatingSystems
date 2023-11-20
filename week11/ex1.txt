@@ -37,3 +37,8 @@ tmp
 lib
 .
 mnt
+
+===================================
+After changing the root directory of the process, looking up `/` inside of the program, it shows up files and directories in `./lofsdisk` folder.
+But when running the program without changing the root directory, it prints the files and directories in the system `/`.
+We can notice that in the second output, number of files is larger as in the first case we created minimum files.
